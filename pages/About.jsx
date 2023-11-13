@@ -1,6 +1,6 @@
 import React from 'react';
 
-function About() {
+const About = (() => {
 
     return (
         <h2 style={{ textAlign: 'center', color: 'orange' }}>
@@ -14,6 +14,6 @@ function About() {
 
         </h2>
     );
-}
+})
 
 export default About;

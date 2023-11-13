@@ -2,7 +2,7 @@ import React from 'react';
 import TaskItem from './TaskItem';
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
-function TaskList({ tasks, title, remove, complete, isCompleted, toggleMode, isEdit, editTask }) {
+const TaskList = (({ tasks, title, remove, complete, isCompleted, toggleMode, isEdit, editTask }) => {
 
     if (!tasks.length) {//если длина равна нулю
         return (
@@ -14,7 +14,7 @@ function TaskList({ tasks, title, remove, complete, isCompleted, toggleMode, isE
 
     return (
         <div>
-            <h1 style={{ textAlign: 'center' }}>
+            <h1>
                 {title}
             </h1>
 
@@ -36,6 +36,6 @@ function TaskList({ tasks, title, remove, complete, isCompleted, toggleMode, isE
 
         </div>
     )
-}
+})
 
 export default TaskList;

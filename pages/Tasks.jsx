@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React, { useMemo, useState, useEffect } from 'react';
 import '../styles/App.css';
 import TaskList from '../components/TaskList';
 import TaskForm from '../components/TaskForm';
@@ -6,24 +6,24 @@ import TaskSorting from '../components/TaskSorting';
 import MyModal from '../components/UI/MyModal/MyModal';
 import MyButton from '../components/UI/button/MyButton';
 
-function Tasks() {
+const Tasks = (() => {
 
 	const [tasks, setTasks] = useState([]);
 	const [sorting, setSorting] = useState({ sort: '', query: '' })
 	const [modal, setModal] = useState(false);
 
-	//создание
+//создание
 	const createTask = (newTask) => {
 		setTasks([...tasks, newTask])
 		setModal(false)
 	}
 
-	//удаление
+//удаление
 	const removeTask = (task) => {
-		setTasks(tasks.sorting(p => p.id !== task.id))
+		setTasks(tasks.filter(p => p.id !== task.id))
 	}
 
-	//завершение
+//завершение
 	const completeTask = (task) => {
 		setTasks([...tasks].map(p => {
 			if (p.id === task.id) {
@@ -33,7 +33,7 @@ function Tasks() {
 		}));
 	}
 
-	//сортировка
+//сортировка
 	const sortedTasks = useMemo(() => {
 		if (sorting.sort) {
 			return [...tasks].sort((a, b) => a[sorting.sort].localeCompare(b[sorting.sort]))
@@ -41,8 +41,8 @@ function Tasks() {
 		return tasks;
 	}, [sorting.sort, tasks]);
 
-	//сохранение
-	React.useEffect(() => {
+//сохранение
+	useEffect(() => {
 		const json = localStorage.getItem("tasks");
 		const loadedTasks = JSON.parse(json);
 		if (loadedTasks) {
@@ -50,12 +50,12 @@ function Tasks() {
 		}
 	}, []);
 
-	React.useEffect(() => {
+	useEffect(() => {
 		const json = JSON.stringify(tasks);
 		localStorage.setItem("tasks", json);
 	}, [tasks]);
 
-	//редактирование
+//редактирование
 	const toggleMode = (task) => {
 		setTasks(tasks.map(p => {
 			if (p.id === task.id) {
@@ -73,7 +73,6 @@ function Tasks() {
 			return p;
 		}));
 	}
-
 
 	return (
 		<div className="App">
@@ -103,6 +102,6 @@ function Tasks() {
 
 		</div>
 	)
-}
+})
 
 export default Tasks;

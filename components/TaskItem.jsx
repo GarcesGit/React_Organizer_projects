@@ -2,7 +2,7 @@ import React from 'react';
 import MyButton from './UI/button/MyButton';
 
 
-function TaskItem(props) {
+const TaskItem = (( props ) => {
 
     return (
         <div className="task">
@@ -43,6 +43,6 @@ function TaskItem(props) {
 
         </div>
     )
-}
+})
 
 export default TaskItem;

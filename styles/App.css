@@ -42,6 +42,13 @@
     color: #C99C80;
 }
 
+h1 {
+    text-align: center;
+    color: #C99C80;
+    font-size: 32px;
+}
+
+.project,
 .task {
     display: flex;
     padding: 10px;
@@ -49,6 +56,12 @@
     margin-top: 10px;
     justify-content: space-between;
     align-items: center;
+}
+
+.project_content {
+    color: #C99C80;
+    text-transform: uppercase;
+    width: 400px;
 }
 
 .task_content {

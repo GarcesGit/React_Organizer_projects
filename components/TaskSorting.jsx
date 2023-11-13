@@ -2,7 +2,7 @@ import React from 'react';
 import MySelect from './UI/select/MySelect';
 import MyInput from './UI/input/MyInput';
 
-function TaskSorting({ sorting, setSorting }) {
+const TaskSorting = (({ sorting, setSorting }) => {
     return (
         <div>
             <MySelect
@@ -17,6 +17,6 @@ function TaskSorting({ sorting, setSorting }) {
             />
         </div>
     )
-}
+})
 
 export default TaskSorting;

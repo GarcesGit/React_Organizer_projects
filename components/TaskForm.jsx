@@ -3,7 +3,7 @@ import uuid from 'react-uuid';
 import MyButton from './UI/button/MyButton';
 import MyInput from './UI/input/MyInput';
 
-function TaskForm({ create }) {
+const TaskForm = (({ create }) => {
 
     function id() {
         return uuid();
@@ -69,6 +69,6 @@ function TaskForm({ create }) {
 
         </form>
     )
-}
+})
 
 export default TaskForm;
