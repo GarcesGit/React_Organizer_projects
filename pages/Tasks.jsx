@@ -43,16 +43,16 @@ const Tasks = (() => {
 
 //сохранение
 	useEffect(() => {
-		const json = localStorage.getItem("tasks");
-		const loadedTasks = JSON.parse(json);
+		const jSon = localStorage.getItem('tasks');
+		const loadedTasks = JSON.parse(jSon);
 		if (loadedTasks) {
 			setTasks(loadedTasks);
 		}
 	}, []);
 
 	useEffect(() => {
-		const json = JSON.stringify(tasks);
-		localStorage.setItem("tasks", json);
+		const jSon = JSON.stringify(tasks);
+		localStorage.setItem('tasks', jSon);
 	}, [tasks]);
 
 //редактирование
@@ -75,8 +75,8 @@ const Tasks = (() => {
 	}
 
 	return (
-		<div className="App">
-			<div className="dashboard">
+		<div className='tasks'>
+			<div className='task_dashboard'>
 				<MyButton onClick={() => setModal(true)}>
 					Создать задачу
 				</MyButton>
@@ -90,7 +90,6 @@ const Tasks = (() => {
 					setSorting={setSorting}
 				/>
 			</div>
-			<hr className="hr-shadow" />
 
 			<TaskList toggleMode={toggleMode}
 				editTask={editTask}
@@ -99,7 +98,6 @@ const Tasks = (() => {
 				tasks={sortedTasks}
 				title='Список задач'
 			/>
-
 		</div>
 	)
 })

@@ -1,14 +1,14 @@
 import React from 'react';
 import ProjectItem from './ProjectItem';
-import { TransitionGroup, CSSTransition } from "react-transition-group";
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 const ProjectList = (({ projects, title, remove, toggleMode, isEdit, editProject }) => {
 
     if (!projects.length) {
         return (
-            <h2 style={{ textAlign: 'center' }}>
+            <h1 style={{ textAlign: 'center' }}>
                 Создайте новый проект!
-            </h2>
+            </h1>
         )
     }
 

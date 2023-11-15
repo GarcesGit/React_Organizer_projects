@@ -51,7 +51,7 @@ const TaskForm = (({ create }) => {
 
             <div >
                 <label> Установите срочность события:
-                    <select className="select"
+                    <select className='select' style={{background: '#634129'}}
                         value={selectValue}
                         onChange={selectChange} >
                         <option defaultValue>...</option>

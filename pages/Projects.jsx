@@ -10,19 +10,15 @@ const Projects = (() => {
 	const [projects, setProjects] = useState([]);
 	const [modal, setModal] = useState(false);
 
-
-	//создание
 	const createProject = (newProject) => {
 		setProjects([...projects, newProject])
 		setModal(false)
 	}
 
-	//удаление
 	const removeProject = (project) => {
 		setProjects(projects.filter(p => p.id !== project.id))
 	}
 
-	//редактирование
 	const toggleMode = (project) => {
 		setProjects(projects.map(p => {
 			if (p.id === project.id) {
@@ -41,9 +37,8 @@ const Projects = (() => {
 		}));
 	}
 
-	//сохранение
 	useEffect(() => {
-		const json = localStorage.getItem("projects");
+		const json = localStorage.getItem('projects');
 		const loadedProjects = JSON.parse(json);
 		if (loadedProjects) {
 			setProjects(loadedProjects);
@@ -52,14 +47,12 @@ const Projects = (() => {
 
 	useEffect(() => {
 		const json = JSON.stringify(projects);
-		localStorage.setItem("projects", json);
+		localStorage.setItem('projects', json);
 	}, [projects]);
 
-
-
 	return (
-		<div className="projects">
-			<div className="dashboard">
+		<div className='projects'>
+			<div className='dashboard'>
 				<MyButton onClick={() => setModal(true)}>
 					Создать проект
 				</MyButton>
@@ -68,7 +61,6 @@ const Projects = (() => {
 					<ProjectForm create={createProject} />
 				</MyModal>
 			</div>
-			<hr className="hr-shadow" />
 
 			<ProjectList toggleMode={toggleMode}
 				editProject={editProject}
@@ -76,15 +68,6 @@ const Projects = (() => {
 				projects={projects}
 				title='Список проектов'
 			/>
-
-
-			{/* <BrowserRouter>
-			<Routes>
-				<Route path="/tasks" element={<Tasks />} />
-			</Routes>
-		</BrowserRouter>
- */}
-
 		</div>
 	)
 })

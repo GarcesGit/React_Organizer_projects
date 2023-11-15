@@ -3,7 +3,8 @@ import React from 'react';
 const MySelect = (({ options, defaultValue, value, onChange }) => {
 
       return (
-            <select className="select"
+            <select className='select' 
+                  style={{background: '#634129'}}
                   value={value}
                   onChange={event => onChange(event.target.value)}
             >

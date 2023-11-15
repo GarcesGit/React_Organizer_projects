@@ -1,23 +1,22 @@
 import React from 'react';
 import TaskItem from './TaskItem';
-import { TransitionGroup, CSSTransition } from "react-transition-group";
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 const TaskList = (({ tasks, title, remove, complete, isCompleted, toggleMode, isEdit, editTask }) => {
 
-    if (!tasks.length) {//если длина равна нулю
+    if (!tasks.length) {
         return (
             <h2 style={{ textAlign: 'center' }}>
-                Все дела завершены!
+                Все задачи завершены!
             </h2>
         )
     }
 
     return (
         <div>
-            <h1>
+            <h2>
                 {title}
-            </h1>
-
+            </h2>
             <TransitionGroup>
                 {tasks.map((task, index) =>
                     <CSSTransition key={task.id} timeout={500} classNames='task'>
@@ -33,7 +32,6 @@ const TaskList = (({ tasks, title, remove, complete, isCompleted, toggleMode, is
                     </CSSTransition>
                 )}
             </TransitionGroup>
-
         </div>
     )
 })

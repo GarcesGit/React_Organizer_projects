@@ -5,11 +5,11 @@ import MyInput from './UI/input/MyInput';
 
 const ProjectForm = (({ create }) => {
 
+    const [project, setProject] = useState({ name: '', isEdit: false })
+
     function id() {
         return uuid();
     }
-
-    const [project, setProject] = useState({ name: '', isEdit: false })
 
     function addNewProject(event) {
         event.preventDefault()
@@ -20,7 +20,6 @@ const ProjectForm = (({ create }) => {
 
     return (
         <form className='taskForm'>
-
             <MyInput
                 value={project.name}
                 onChange={event => setProject({ ...project, name: event.target.value })}
@@ -28,9 +27,7 @@ const ProjectForm = (({ create }) => {
                 placeholder='Название проекта'
             />
 
-
             <MyButton onClick={addNewProject}>Создать проект</MyButton>
-
         </form>
     )
 })
