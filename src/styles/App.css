@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: url('../pictures/8.jpg');
+    background: url("../pictures/dark_wood.jpg");
 }
 
 #root {
@@ -22,9 +22,8 @@
     justify-content: space-between;
 }
 
-
 .select {
-    color: #C99C80;
+    color: #c99c80;
     background: #824a25;
     min-width: 100px;
     min-height: 15px;
@@ -38,12 +37,12 @@
 
 .input {
     width: 400px;
-    color: #C99C80;
+    color: #c99c80;
 }
 
 h1 {
     text-align: center;
-    color: #C99C80;
+    color: #c99c80;
     font-size: 32px;
     margin-bottom: 20px;
     margin-top: 20px;
@@ -61,18 +60,18 @@ h2 {
 .tasks {
     width: 650px;
     text-align: left;
-    color: #C99C80;
-    background: url('../pictures/7.jpg');
+    color: #c99c80;
+    background: url("../pictures/brown_wood.jpg");
     margin: 10px 10px;
     padding: 10px 10px;
-    border: 2px solid #C99C80;
+    border: 2px solid #c99c80;
 }
 
 .project,
 .task {
     display: flex;
     padding: 10px;
-    border: 2px solid #C99C80;
+    border: 2px solid #c99c80;
     margin-top: 10px;
     justify-content: space-between;
     align-items: center;
@@ -85,18 +84,18 @@ h2 {
 }
 
 .task_content {
-    color: #E3864A;
+    color: #e3864a;
 }
 
 .tasks * {
-    background: url('../pictures/7.jpg');
+    background: url("../pictures/brown_wood.jpg");
 }
 
 .task_content_time {
     display: flex;
     margin-left: 18px;
     margin-top: 5px;
-    color: #C99C80;
+    color: #c99c80;
 }
 
 .task_content_time_each {
@@ -132,16 +131,16 @@ h2 {
     height: 50px;
     width: 100vw;
     padding: 10px 20px;
-    background: url('../pictures/7.jpg');
+    background: url("../pictures/brown_wood.jpg");
 }
 
 .navbar a:link,
 .navbar a:visited {
     padding: 10px;
-    color: #C99C80;
+    color: #c99c80;
     text-decoration: none;
     font: bold 14px Arial;
-    background: url('../pictures/7.jpg');
+    background: url("../pictures/brown_wood.jpg");
 }
 
 .navbar a:hover,

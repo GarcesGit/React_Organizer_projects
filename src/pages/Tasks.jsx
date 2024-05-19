@@ -40,6 +40,7 @@ const Tasks = (() => {
 		}
 		return tasks;
 	}, [sorting.sort, tasks]);
+	// console.log(sortedTasks);
 
 //сохранение
 	useEffect(() => {
@@ -51,6 +52,7 @@ const Tasks = (() => {
 	}, []);
 
 	useEffect(() => {
+console.log(tasks);
 		const jSon = JSON.stringify(tasks);
 		localStorage.setItem('tasks', jSon);
 	}, [tasks]);
