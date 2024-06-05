@@ -1,19 +1,17 @@
-import React from 'react';
+import React from "react";
 
-const About = (() => {
-
+const About = () => {
     return (
-        <h2 style={{ textAlign: 'center', color: 'orange' }}>
-            Это приложение создано в качестве учебного проекта на React
+        <h2 style={{ textAlign: "center", color: "orange" }}>
             <br />
-            Разработчик: Наталья Кошукова
+            Приложение МЕНЕДЖЕР ЗАДАЧ - это инструмент для управления проектами.
             <br />
-            https://t.me/NatashKosh
+            Поможет планировать, расставлять приоритеты по задачам и контролировать соки
+            выполнения.
             <br />
-            https://github.com/GarcesGit
-
+            Работу можно сделать проще и приятнее, если использовать МЕНЕДЖЕР ЗАДАЧ.
         </h2>
     );
-})
+};
 
 export default About;

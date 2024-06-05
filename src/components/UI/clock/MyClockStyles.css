@@ -1,0 +1,13 @@
+.myClock {
+    position: absolute;
+    top: 50px;
+    left: 60px;
+    z-index: 1;
+}
+.react-clock {
+    width: 150px;
+    height: 150px;
+}
+.react-clock__face {
+    background: #f4ae826f;
+}

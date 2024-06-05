@@ -3,18 +3,24 @@
     padding: 0;
     box-sizing: border-box;
     background: url("../pictures/dark_wood.jpg");
+    border-radius: 5px;
 }
 
-#root {
+.main {
     display: flex;
-    flex-direction: column;
+    position: relative;
     align-items: center;
 }
 
+.tools {
+    min-width: 200px;
+    display: block;
+    position: static;
+}
 .dashboard {
     margin-top: 20px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 
 .task_dashboard {
@@ -36,13 +42,13 @@
 }
 
 .input {
-    width: 400px;
+    width: 250px;
     color: #c99c80;
 }
 
 h1 {
     text-align: center;
-    color: #c99c80;
+    color: #dd6337;
     font-size: 32px;
     margin-bottom: 20px;
     margin-top: 20px;
@@ -50,13 +56,22 @@ h1 {
 
 h2 {
     text-align: center;
+    color: orange;
 }
 
+.projects {
+    margin-left: 80px;
+}
 .projectLink {
     color: #dd6337;
     font-weight: bold;
 }
 
+.project {
+    min-width: 650px;
+    max-width: 1000px;
+    position: relative;
+}
 .tasks {
     width: 650px;
     text-align: left;
@@ -79,6 +94,7 @@ h2 {
 
 .project_content {
     width: 300px;
+    padding-right: 10px;
     color: #dd6337;
     text-transform: uppercase;
 }
@@ -128,6 +144,7 @@ h2 {
 
 .navbar {
     display: flex;
+    align-items: center;
     height: 50px;
     width: 100vw;
     padding: 10px 20px;
@@ -146,7 +163,7 @@ h2 {
 .navbar a:hover,
 .navbar a:active {
     color: #dd6337;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .hr-shadow {
